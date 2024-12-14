@@ -1,8 +1,8 @@
-import pathlib
+from pathlib import Path
 
 
 def getDataLines():
-    with open(pathlib.Path.cwd() / "01" / "data.txt") as file:
+    with open(Path(__file__).parent / "data.txt") as file:
         lines = file.readlines()
         return lines
 

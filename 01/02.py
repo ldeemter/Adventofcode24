@@ -1,9 +1,9 @@
-import pathlib
+from pathlib import Path
 from typing import Counter
 
 
 def getDataLines():
-    with open(pathlib.Path.cwd() / "01" / "data.txt") as file:
+    with open(Path(__file__).parent / "data.txt") as file:
         lines = file.readlines()
         return lines
 
