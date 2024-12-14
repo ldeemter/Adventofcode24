@@ -10,7 +10,7 @@ def getDataLines():
 class Report:
     def __init__(self, levels: list[int]) -> None:
         self.levels = levels
-        
+
     def isSafe(self):
         isAscending = self.levels[0] < self.levels[1]
         for i in range(1, len(self.levels)):
@@ -29,8 +29,8 @@ class Report:
 
     @classmethod
     def createFromLine(cls, line: str):
-        return cls(list(map(int,line.split())))
-    
+        return cls(list(map(int, line.split())))
+
 
 reports = getDataLines()
 print(sum([Report.createFromLine(line).isSafe() for line in reports]))
