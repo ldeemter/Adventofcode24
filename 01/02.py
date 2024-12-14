@@ -22,6 +22,6 @@ col2Counter = Counter(col2)
 
 cumulative = 0
 for k, v in col1Counter.items():
-    cumulative += k*v*col2Counter.get(k, 0)
-    
+    cumulative += k * v * col2Counter.get(k, 0)
+
 print(cumulative)
