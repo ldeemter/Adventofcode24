@@ -8,14 +8,6 @@ def getDataLines():
         return lines
 
 
-findNumberRegex = "d+"
-
-
-def calculateFromString(s: str) -> int:
-    numbers = re.findall(findNumberRegex, s)
-    return numbers
-
-
 data = getDataLines()
 
 operations = re.findall(r"mul\((\d+)\,(\d+)\)", data)
